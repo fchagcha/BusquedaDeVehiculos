@@ -11,10 +11,11 @@ namespace Bdv.BackgroundPublisherJob.Api.Configure
     {
         public static IServiceCollection ConfigureServices(this IServiceCollection services,
             IConfiguration configuration,
+            DatabaseType databaseType,
             EventBusProvider eventBusProvider)
         {
             services.AddExceptionless(configuration)
-                    .CofigureIntegrationForJobs(configuration, DatabaseType.MySQL)
+                    .CofigureIntegrationForJobs(configuration, databaseType)
                     .AddEventBusServicePublisher(configuration, eventBusProvider)
                     .AddQuartzService();
 

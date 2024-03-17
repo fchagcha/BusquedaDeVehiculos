@@ -18,8 +18,22 @@
 
             var vehiculosDisponiblesResponse = await
                 vehiculosDisponiblesQuery
-                .Select(x => x.ToVehiculoDisponibleResponse(request))
+                .Select(vehiculo => new VehiculosDisponiblesResponse(
+                    vehiculo.LocalidadActual.Mercado,
+                    vehiculo.Id,
+                    request.IdLocalidadRecogida,
+                    request.IdLocalidadDevolucion ?? request.IdLocalidadRecogida,
+                    request.FechaDeRecogida.ToLongDateString(),
+                    request.FechaDeDevolucion.ToLongDateString(),
+                    vehiculo.Tipo.ToString(),
+                    vehiculo.Marca,
+                    vehiculo.Modelo,
+                    vehiculo.TarifaDiaria,
+                    vehiculo.TarifaDiaria * (request.FechaDeDevolucion - request.FechaDeRecogida).Days))
                 .ToListAsync();
+
+            if (vehiculosDisponiblesResponse.Count == 0)
+                return Result.Failure<List<VehiculosDisponiblesResponse>>(Vehiculo.ErrorNoHayVehiculosDisponibles);
 
             return vehiculosDisponiblesResponse;
         }

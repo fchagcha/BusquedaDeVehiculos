@@ -55,6 +55,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bdv.EnvioCorreo.Api", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bdv.Reservas.Api.Query.Test", "test\Bdv.Reservas.Api.Query.Test\Bdv.Reservas.Api.Query.Test.csproj", "{63E3D7D9-F832-4D64-9C58-EB721C39BC80}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bdd", "bdd", "{C86D809C-7057-41A1-AD90-2DD99338241A}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Users\User\Desktop\Script Base de datos.sql = ..\..\..\Users\User\Desktop\Script Base de datos.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -10,10 +10,11 @@ namespace Bdv.EnvioCorreo.Api.Configure
     {
         public static IServiceCollection ConfigureServices<TConsumer>(this IServiceCollection services,
             IConfiguration configuration,
+            DatabaseType databaseType,
             EventBusProvider eventBusProvider) where TConsumer : class, IConsumer
         {
             services.AddExceptionless(configuration)
-                    .CofigureIntegrationForJobs(configuration, DatabaseType.MySQL)
+                    .CofigureIntegrationForJobs(configuration, databaseType)
                     .AddEventBusServiceConsumer<TConsumer>(
                         configuration,
                         eventBusProvider);
