@@ -4,4 +4,4 @@ La solución implementa un sistema de búsqueda avanzado de vehículos utilizand
 
 La persistencia de datos se realiza en una base de datos SQL, con configuración para **MySQL y SqlServer**. Además, se emplea el patrón **Domain-Driven Design** (**DDD**) para el modelado del dominio utilizando paquetería propia, y el **Result Pattern** para el control de errores. **Exceptionless** se utiliza para el registro de excepciones no controladas, garantizando la estabilidad y fiabilidad del sistema.
 
-Esta solución proporciona una plataforma sólida y escalable para la búsqueda de vehículos, ofreciendo una experiencia óptima a los usuarios al encontrar vehículos disponibles según sus necesidades y preferencias.
+Esta solución utiliza .NET 8 como tecnología principal.
