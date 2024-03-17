@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Validadores\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Fabrela.FabrelaMapper" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Compartido\Bdv.Comun\Bdv.Comun.csproj" />
+    <ProjectReference Include="..\..\..\Integracion\Integracion.Core\Integracion.Core.csproj" />
+    <ProjectReference Include="..\..\..\Integracion\Integracion.Dto\Integracion.Dto.csproj" />
+    <ProjectReference Include="..\Bdv.Reservas.Aplicacion.Dto\Bdv.Reservas.Aplicacion.Dto.csproj" />
+    <ProjectReference Include="..\Bdv.Reservas.Dominio\Bdv.Reservas.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>

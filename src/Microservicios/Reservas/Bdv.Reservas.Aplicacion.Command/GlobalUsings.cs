@@ -1,0 +1,10 @@
+﻿global using Bdv.Cqrs.Interfaces;
+global using Bdv.Reservas.Aplicacion.Dto.Command;
+global using Bdv.Reservas.Dominio.Entidades;
+global using Fabrela.Domain.Core.Interfaces.UnitOfWork;
+global using Fabrela.FabrelaMapper.Interfaces;
+global using Fabrela.FabrelaResult.Abstractions;
+global using Integracion.Core.InterfacesServices;
+global using Integracion.Dto.Commands;
+global using Integracion.Dto.Events;
+global using Integracion.Dto.Extensions;

@@ -1,0 +1,6 @@
+@Bdv.Reservas.Api.Query_HostAddress = http://localhost:5185
+
+GET {{Bdv.Reservas.Api.Query_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

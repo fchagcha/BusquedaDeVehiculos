@@ -1,0 +1,6 @@
+@Bdv.BackgroundPublisherJob.Api_HostAddress = http://localhost:5110
+
+GET {{Bdv.BackgroundPublisherJob.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

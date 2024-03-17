@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Compartido\Bdv.Comun\Bdv.Comun.csproj" />
+    <ProjectReference Include="..\Bdv.Reservas.Aplicacion.Dto\Bdv.Reservas.Aplicacion.Dto.csproj" />
+    <ProjectReference Include="..\Bdv.Reservas.Dominio\Bdv.Reservas.Dominio.csproj" />
+  </ItemGroup>
+
+</Project>

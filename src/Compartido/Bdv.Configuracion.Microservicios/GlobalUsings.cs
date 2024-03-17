@@ -1,0 +1,11 @@
+﻿global using Bdv.Infraestructura.Data.DependencyInjection;
+global using Bdv.Infraestructura.Data.Interceptors;
+global using Bdv.Infraestructura.Data.Persistencia;
+global using Exceptionless;
+global using Fabrela.Infraestructura.Messaging.DependencyInjection;
+global using Integracion.Comun.Enums;
+global using Microsoft.AspNetCore.Builder;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.Configuration;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Hosting;
