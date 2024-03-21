@@ -46,8 +46,7 @@
             var vehiculoQuery =
                 _query
                 .Filtrar<Vehiculo>(
-                    x => x.LocalidadActual.Mercado.Equals(mercadoCliente) &&
-                        !idsVehiculosReservadosQuery.Contains(x.Id));
+                    x => x.LocalidadActual.Mercado.Equals(mercadoCliente));
 
             if (request.TipoVehiculo != 0)
             {
@@ -55,7 +54,19 @@
                 vehiculoQuery = vehiculoQuery.Where(x => x.Tipo == tipoVehiculo);
             }
 
-            return vehiculoQuery;
+            var vehiculosDisponiblesQuery =
+                vehiculoQuery
+                .GroupJoin(idsVehiculosReservadosQuery,
+                    vehiculo => vehiculo.Id,
+                    idVehiculoreservado => idVehiculoreservado,
+                    (vehiculo, idVehiculoreservado) => new { vehiculo, idVehiculoreservado })
+                .SelectMany(
+                    x => x.idVehiculoreservado.DefaultIfEmpty(),
+                    (x, idVehiculoReservado) => new { x.vehiculo, idVehiculoReservado })
+                .Where(x => x.idVehiculoReservado == null)
+                .Select(x => x.vehiculo);
+
+            return vehiculosDisponiblesQuery;
         }
 
         private IQueryable<Guid> ObtenerIdsVehiculosReservadosQuery(

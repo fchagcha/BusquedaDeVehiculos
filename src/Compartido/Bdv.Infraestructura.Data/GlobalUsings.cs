@@ -26,7 +26,6 @@ global using Microsoft.Extensions.Logging;
 global using Microsoft.IdentityModel.Tokens;
 global using NetCore.AutoRegisterDi;
 global using Newtonsoft.Json;
-global using System.Collections;
 global using System.Data;
 global using System.Data.Common;
 global using System.Linq.Expressions;
